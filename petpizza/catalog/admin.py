@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Customer, ProductType, Pizza, PizzaInstance
 
-# Register your models here.
+
+admin.site.register(Customer)
+admin.site.register(ProductType)
+admin.site.register(Pizza)
+admin.site.register(PizzaInstance)

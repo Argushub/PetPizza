@@ -4,4 +4,3 @@ db.sqlite3
 migrations/
 __pycache__/
 *.pyc
-petpizza/catalog/__pycache__
