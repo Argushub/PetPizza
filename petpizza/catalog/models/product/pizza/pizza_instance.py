@@ -35,4 +35,4 @@ class PizzaInstance(models.Model):
         ordering = ['order_time']
 
     def __str__(self):
-        return "{}: {}".format(self.order_time, self.pizza_type.name)
+        return "{}: {}, {}".format(self.order_time, self.pizza_type.type.name, self.pizza_type.name)
