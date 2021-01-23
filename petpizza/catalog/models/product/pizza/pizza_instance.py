@@ -1,13 +1,12 @@
 from django.db import models
 from .pizza import Pizza
-from ...customer import Customer
+from ..product_instance import ProductInstance
 
 
-class PizzaInstance(models.Model):
+class PizzaInstance(ProductInstance):
     """
     This model representing instance of pizza, that was be bought.
     """
-    order_time = models.DateTimeField()
     pizza_type = models.ForeignKey(
         Pizza,
         on_delete=models.SET_NULL,
@@ -25,14 +24,6 @@ class PizzaInstance(models.Model):
         ('40', '40 sm')
     )
     size = models.CharField(max_length=2, choices=SIZE_TYPE, help_text='Pizza size')
-    customer = models.ForeignKey(
-        Customer,
-        on_delete=models.SET_NULL,
-        null=True
-    )
-
-    class Meta:
-        ordering = ['order_time']
 
     def __str__(self):
-        return "{}: {}, {}".format(self.order_time, self.pizza_type.type.name, self.pizza_type.name)
+        return "{}: {}, {} {}".format(self.order_time, self.pizza_type.name, self.dough, self.size)
