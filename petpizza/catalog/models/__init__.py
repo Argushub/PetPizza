@@ -1,9 +1,2 @@
 from .customer import Customer
-from .product.product_instance import ProductInstance
-from .product.product import Product
-from .product.drink.drink import Drink
-from .product.drink.drink_instance import DrinkInstance
-from .product.snack.snack import Snack
-from .product.snack.snack_instance import SnackInstance
-from .product.pizza.pizza import Pizza
-from .product.pizza.pizza_instance import PizzaInstance
+from .product import Snack, Product, ProductOrder, Pizza, Drink

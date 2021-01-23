@@ -1,7 +1,8 @@
 from django.db import models
+from polymorphic.models import PolymorphicModel
 
 
-class Product(models.Model):
+class Product(PolymorphicModel):
     """
     This is abstract model for product.
     """
@@ -11,7 +12,6 @@ class Product(models.Model):
     image = models.ImageField(default=None)
 
     class Meta:
-        abstract = True
         ordering = ['name']
 
     def __str__(self):
