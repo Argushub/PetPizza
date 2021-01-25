@@ -1,0 +1,7 @@
+<div>
+    <ul>
+    {% for product in products %}
+        <li>{{ product.name }} <img src="{{ product.image.url }}" height="200" width="400"></li>
+    {% endfor %}
+    </ul>
+</div>

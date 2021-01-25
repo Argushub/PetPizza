@@ -9,7 +9,7 @@ class Product(PolymorphicModel):
     name = models.CharField(max_length=50, default=None, help_text="Enter a product name")
     price = models.IntegerField(default=None, help_text="Enter a price")
     description = models.TextField(max_length=1000, default=None, help_text="Enter a description of the product")
-    image = models.ImageField(default=None)
+    image = models.ImageField(upload_to='catalog/files/media', default=None)
 
     class Meta:
         ordering = ['name']

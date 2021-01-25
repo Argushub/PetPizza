@@ -1,0 +1,12 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+<h1>Main Page</h1>
+    <p>This is our products</p>
+    <p><strong>Pizza:</strong></p>
+    {% include "display_product.html" with products=pizzas %}
+    <p><strong>Snack:</strong></p>
+    {% include "display_product.html" with products=snacks %}
+    <p><strong>Drink:</strong></p>
+    {% include "display_product.html" with products=drinks %}
+{% endblock %}
