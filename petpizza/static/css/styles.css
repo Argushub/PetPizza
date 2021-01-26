@@ -1,0 +1,15 @@
+.nav-link {
+    font-family: "Gotham Pro", Helvetica, Arial !important;
+    color: #70544f;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-size: 3;
+}
+
+.nav-link:hover {
+    color: #009471
+}
+
+.nav-item {
+    justify-content: centre;
+}
